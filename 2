@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int num, rounded;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    if (num % 5 == 0) {
+        printf("%d is divisible by 5.\n", num);
+    } else {
+        rounded = ((num / 5) * 5) + 5;
+        printf("%d is not divisible by 5. Rounded up to %d.\n", num, rounded);
+    }
+        return 0;
+}
