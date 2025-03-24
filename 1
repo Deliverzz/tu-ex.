@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double x, y, distanceSq, h, k, r;       
+    
+    printf("Enter the coordinates of the point (x y): ");
+    scanf("%lf %lf", &x, &y);
+
+    printf("Enter the circle's center (h k) and radius (r): ");
+    scanf("%lf %lf %lf", &h, &k, &r);
+
+    distanceSq = (x - h) * (x - h) + (y - k) * (y - k);
+
+    if (distanceSq < r * r) {
+        printf("The point is inside the circle.\n");
+    } else if (distanceSq == r * r) {
+        printf("The point is on the circle.\n");
+    } else {
+        printf("The point is outside the circle.\n");
+    }
+
+    return 0;
+}
