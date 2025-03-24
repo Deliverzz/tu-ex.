@@ -1,18 +1,12 @@
 #include <stdio.h>
-
-// Helper function to check for leap year
 int isLeapYear(int year) {
     return (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
 }
-
 int main() {
     int day, month, year;
     int daysInMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-
     printf("Enter a date (day month year): ");
     scanf("%d %d %d", &day, &month, &year);
-
-    // Basic checks
     if (month < 1 || month > 12) {
         printf("Invalid date (month out of range).\n");
         return 0;
@@ -20,10 +14,8 @@ int main() {
 
     // Leap year check
     if (isLeapYear(year)) {
-        daysInMonth[1] = 29; // February has 29 days in a leap year
+        daysInMonth[1] = 29; 
     }
-
-    // Check day range
     if (day < 1 || day > daysInMonth[month - 1]) {
         printf("Invalid date (day out of range).\n");
     } else {
